@@ -6,14 +6,14 @@
 
 This project models a common academic analytics question: *does performance in an introductory prerequisite course predict success in the follow-on course, and how much does gap time between courses matter?*
 
-The dataset and scenario are **hypothetical and synthetically generated** — they are modeled on the type of cohort-progression analysis commonly used by academic departments to evaluate prerequisite policy, but do not represent any real institution, real students, or real grades. All student identifiers are randomly generated anonymous codes (e.g. `STU-00042`); no names, IDs, or institutional data are used or included.
+The dataset and scenario are **hypothetical and synthetically generated** they are modeled on the type of cohort-progression analysis commonly used by academic departments to evaluate prerequisite policy, but do not represent any real institution, real students, or real grades. All student identifiers are randomly generated anonymous codes (e.g. `STU-00042`); no names, IDs, or institutional data are used or included.
 
 ## Scenario
 
 A chemistry department wants to know:
 1. Do students who earn a C/D in General Chemistry succeed in Organic Chemistry at a meaningfully lower rate than A/B students?
 2. How long is the typical gap between finishing General Chemistry and starting Organic Chemistry (course/lab availability doesn't guarantee the very next term)?
-3. Among students who failed General Chemistry on their first attempt, retook it, and passed — how many went on to pass Organic Chemistry?
+3. Among students who failed General Chemistry on their first attempt, retook it, and passed, how many went on to pass Organic Chemistry?
 
 This kind of analysis directly informs real policy decisions, such as whether to raise the minimum prerequisite grade required to advance.
 
@@ -26,7 +26,7 @@ gen_chem_grades    (anon_id, term_order, grade)
 org_chem_grades    (anon_id, term_order, grade)
 ```
 
-Students are tracked only by `anon_id` — an unlinked, randomly assigned identifier — across both courses, any number of terms (including gap terms), and a `students` dimension table capturing major, department, enrollment type, and class standing at the time they first took General Chemistry. The dataset spans six majors across six departments (Chemistry, Biology, Pre-Health, Chemical Engineering, Nursing, Environmental Science), reflecting that General/Organic Chemistry are prerequisite services courses for majors well beyond Chemistry itself.
+Students are tracked only by `anon_id`, an unlinked, randomly assigned identifier — across both courses, any number of terms (including gap terms), and a `students` dimension table capturing major, department, enrollment type, and class standing at the time they first took General Chemistry. The dataset spans six majors across six departments (Chemistry, Biology, Pre-Health, Chemical Engineering, Nursing, Environmental Science), reflecting that General/Organic Chemistry are prerequisite service course for majors well beyond Chemistry itself.
 
 ## Key SQL Techniques Used
 
@@ -48,7 +48,7 @@ Students who failed General Chemistry on their first attempt, passed on retake, 
 
 These results are consistent with the kind of pattern that would support a prerequisite-policy conversation (e.g., requiring a B- or better in General Chemistry before enrolling in Organic Chemistry).
 
-**Query C** breaks this down further by department and class standing at first Gen Chem attempt — e.g. Chemistry majors who first took Gen Chem as Juniors (often transfers or major-switchers) passed Organic Chem at a notably higher rate (92.9%) than the typical Freshman-start cohort (67.4%), a pattern worth flagging to an advisor rather than assuming later starters are automatically higher-risk.
+**Query C** breaks this down further by department and class standing at first Gen Chem attempt e.g. Chemistry majors who first took Gen Chem as Juniors (often transfers or major-switchers) passed Organic Chem at a notably higher rate (92.9%) than the typical Freshman-start cohort (67.4%), a pattern worth flagging to an advisor rather than assuming later starters are automatically higher-risk.
 
 ## Repository Structure
 
@@ -71,7 +71,7 @@ sqlite3 data/student_progression.db < sql/analysis_queries.sql
 
 ## Background
 
-This project is modeled on a real type of analysis I supported informally, outside of teaching duties, while working with department-level student outcome data. This repository rebuilds that same analytical question — properly, in SQL, on synthetic data — as part of formalizing my SQL skills.
+This project is modeled on a real type of analysis I supported informally, outside of teaching duties, while working with department-level student outcome data. This repository rebuilds that same analytical question, properly, in SQL, on synthetic data, as part of formalizing my SQL skills.
 
 ## Author
 
