@@ -26,7 +26,7 @@ gen_chem_grades    (anon_id, term_order, grade)
 org_chem_grades    (anon_id, term_order, grade)
 ```
 
-Students are tracked only by `anon_id`, an unlinked, randomly assigned identifier — across both courses, any number of terms (including gap terms), and a `students` dimension table capturing major, department, enrollment type, and class standing at the time they first took General Chemistry. The dataset spans six majors across six departments (Chemistry, Biology, Pre-Health, Chemical Engineering, Nursing, Environmental Science), reflecting that General/Organic Chemistry are prerequisite service course for majors well beyond Chemistry itself.
+Students are tracked only by `anon_id`, an unlinked, randomly assigned identifier, across both courses, any number of terms (including gap terms), and a `students` dimension table capturing major, department, enrollment type, and class standing at the time they first took General Chemistry. The dataset spans six majors across six departments (Chemistry, Biology, Pre-Health, Chemical Engineering, Nursing, Environmental Science), reflecting that General/Organic Chemistry are prerequisite service course for majors well beyond Chemistry itself.
 
 ## Key SQL Techniques Used
 
