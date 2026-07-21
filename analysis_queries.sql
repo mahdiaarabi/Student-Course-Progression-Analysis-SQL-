@@ -99,3 +99,4 @@ LEFT JOIN first_organic_attempt foa ON foa.anon_id = fp.anon_id AND foa.oc_term 
 LEFT JOIN org_chem_grades oc ON oc.anon_id = fp.anon_id AND oc.term_order = foa.oc_term
 GROUP BY s.department, s.class_standing_gc
 ORDER BY s.department, s.class_standing_gc;
+
