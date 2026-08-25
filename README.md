@@ -77,4 +77,3 @@ This project is modeled on a real type of analysis I supported informally, outsi
 
 **Mahdi Aarabi, Ph.D.**
 Computational Scientist
-
