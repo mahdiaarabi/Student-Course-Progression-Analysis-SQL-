@@ -129,4 +129,3 @@ print(f"Students: {N_STUDENTS}")
 print(f"Gen Chem grade records: {len(gen_chem_rows)}")
 print(f"Org Chem grade records: {len(org_chem_rows)}")
 conn.close()
-
